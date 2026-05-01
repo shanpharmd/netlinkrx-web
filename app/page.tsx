@@ -167,10 +167,10 @@ export default function Home() {
             <Image
               src="/netlinkrx-logo.svg"
               alt="NetLinkRx"
-              width={140}
-              height={32}
+              width={240}
+              height={64}
               priority
-              className="h-8 w-auto"
+              className="h-11 w-auto"
             />
           </a>
           <nav className="hidden md:flex items-center gap-8">
@@ -195,9 +195,9 @@ export default function Home() {
 
       <main id="top" className="flex-1">
         {/* HERO */}
-        <section className="relative overflow-hidden border-b border-slate-200">
-          <div className="absolute inset-0 -z-10 bg-gradient-to-b from-blue-50/40 via-white to-white" />
-          <div className="mx-auto max-w-4xl px-6 py-24 md:py-32 text-center">
+        <section className="relative overflow-hidden border-b border-slate-200 bg-grid-hero">
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-white" />
+          <div className="relative mx-auto max-w-4xl px-6 py-24 md:py-32 text-center">
             <div className="flex justify-center mb-6">
               <Eyebrow>Clinical Telepharmacy</Eyebrow>
             </div>
@@ -233,7 +233,7 @@ export default function Home() {
         </section>
 
         {/* CORE SERVICES */}
-        <section id="services" className="py-24 md:py-32">
+        <section id="services" className="bg-grid py-24 md:py-32">
           <div className="mx-auto max-w-7xl px-6">
             <div className="text-center max-w-3xl mx-auto">
               <Eyebrow>Core Services</Eyebrow>
@@ -345,7 +345,7 @@ export default function Home() {
         </section>
 
         {/* HOW WE WORK */}
-        <section id="how-we-work" className="py-24 md:py-32">
+        <section id="how-we-work" className="bg-grid py-24 md:py-32">
           <div className="mx-auto max-w-7xl px-6">
             <div className="max-w-2xl">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900">
@@ -409,30 +409,41 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-slate-900">
-                    Why NetLinkRx?
-                  </h3>
-                  <span className="text-xs font-semibold uppercase tracking-widest text-blue-700">
-                    Why Us
-                  </span>
+              <div className="space-y-6">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 shadow-lg">
+                  <Image
+                    src="/pharmacist-monitors.png"
+                    alt="Clinical pharmacist reviewing medication orders on dual monitors"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
                 </div>
-                <ul className="mt-6 space-y-4">
-                  {whyNetLinkRx.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <Check />
-                      <span className="text-sm text-slate-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-semibold text-slate-900">
+                      Why NetLinkRx?
+                    </h3>
+                    <span className="text-xs font-semibold uppercase tracking-widest text-blue-700">
+                      Why Us
+                    </span>
+                  </div>
+                  <ul className="mt-6 space-y-4">
+                    {whyNetLinkRx.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <Check />
+                        <span className="text-sm text-slate-700">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* CLINICAL PROGRAMS */}
-        <section id="clinical-programs" className="py-24 md:py-32">
+        <section id="clinical-programs" className="bg-grid py-24 md:py-32">
           <div className="mx-auto max-w-7xl px-6">
             <div className="text-center max-w-3xl mx-auto">
               <Eyebrow>Clinical Programs</Eyebrow>
@@ -569,9 +580,9 @@ export default function Home() {
               <Image
                 src="/netlinkrx-logo.svg"
                 alt="NetLinkRx"
-                width={140}
-                height={32}
-                className="h-8 w-auto"
+                width={240}
+                height={64}
+                className="h-12 w-auto"
               />
               <p className="mt-4 text-sm text-slate-600">
                 Clinical Telepharmacy for Critical Access &amp; Rural
