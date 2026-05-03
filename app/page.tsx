@@ -1,26 +1,46 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  ClipboardCheck,
+  Clock3,
+  Layers,
+  ArrowLeftRight,
+  ShieldCheck,
+  ShieldPlus,
+  PillBottle,
+  GitMerge,
+  Route,
+  MessageCircleHeart,
+  PhoneCall,
+  Headphones,
+  GraduationCap,
+} from "lucide-react";
 
 const services = [
   {
     title: "Remote Order Entry & Verification",
     body: "Centralized medication order review and approval process for life-saving therapies. We deliver patient safety, HIPAA compliance, and quality monitoring across your acute care, infusion, or outpatient clinical needs.",
+    Icon: ClipboardCheck,
   },
   {
     title: "24/7 Pharmacist Availability",
     body: "Round-the-clock clinical pharmacist coverage for overnight, weekend, peak times, sudden licensure absences, and emergencies — without the FTE cost.",
+    Icon: Clock3,
   },
   {
     title: "Medication Order Management",
     body: "End-to-end medication review prior to administration. Integrates with 200+ pharmacy information systems and CPOE platforms to ensure compliance and reduce turnaround time.",
+    Icon: Layers,
   },
   {
     title: "Admission & Discharge Medication Reconciliation",
     body: "Pharmacist-led reconciliation at every transition point, admission, transfer, and discharge, to eliminate discrepancies, reduce readmissions, and improve care continuity.",
+    Icon: ArrowLeftRight,
   },
   {
     title: "Clinical Program Support",
     body: "Specialized pharmacist expertise in antimicrobial stewardship, transitions of care, discharge counseling, post-discharge follow-up, and provider education.",
+    Icon: ShieldCheck,
   },
 ];
 
@@ -78,34 +98,42 @@ const clinicalPrograms = [
   {
     title: "Antimicrobial Stewardship",
     body: "Pharmacist-led ASP programs to optimize antibiotic selection, dosing, and duration to reduce resistance and improve outcomes.",
+    Icon: ShieldPlus,
   },
   {
     title: "Opioid Stewardship",
     body: "Evidence-based protocols to minimize opioid misuse, manage pain relief, and comply with state and federal laws.",
+    Icon: PillBottle,
   },
   {
     title: "Medication Reconciliation",
     body: "Comprehensive reconciliation across admission, transfer, and discharge to eliminate discrepancies and prevent adverse drug events.",
+    Icon: GitMerge,
   },
   {
     title: "Transitions of Care",
     body: "Pharmacist reviews of transitioning patients to outpatient, reducing 30-day readmissions and improving community continuity.",
+    Icon: Route,
   },
   {
     title: "Discharge Counseling",
     body: "Patient-facing pharmacist-led counseling at discharge to improve adherence, reduce errors, and support post-discharge compliance.",
+    Icon: MessageCircleHeart,
   },
   {
     title: "Post-Discharge Follow-Up",
     body: "Provides outreach to discharged patients to identify medication adherence behaviors, key issues, and assess outcomes.",
+    Icon: PhoneCall,
   },
   {
     title: "Drug Information & Hotline",
     body: "On demand, on-call drug information support for physicians, nurses, and clinical staff. 24 hours a day, 7 days a week.",
+    Icon: Headphones,
   },
   {
     title: "Provider Education & Support",
     body: "Tailored pharmacist-led education on safe prescribing, formulary, and medication management protocols.",
+    Icon: GraduationCap,
   },
 ];
 
@@ -248,10 +276,8 @@ export default function Home() {
                 key={s.title}
                 className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 hover:border-slate-300 hover:shadow-lg hover:-translate-y-0.5 transition-all"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 text-blue-600 shadow-[inset_0_1px_2px_rgba(15,23,42,0.06)] group-hover:scale-105 group-hover:text-blue-700 transition-all duration-200">
+                  <s.Icon className="h-6 w-6" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-semibold text-slate-900 leading-tight">
                   {s.title}
@@ -470,12 +496,10 @@ export default function Home() {
             {clinicalPrograms.map((p) => (
               <div
                 key={p.title}
-                className="rounded-2xl border border-slate-200 bg-white p-6 hover:border-slate-300 hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                className="group rounded-2xl border border-slate-200 bg-white p-6 hover:border-slate-300 hover:shadow-lg hover:-translate-y-0.5 transition-all"
               >
-                <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600">
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
-                  </svg>
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-50 to-teal-50 text-emerald-600 shadow-[inset_0_1px_2px_rgba(15,23,42,0.06)] group-hover:scale-105 group-hover:text-emerald-700 transition-all duration-200">
+                  <p.Icon className="h-6 w-6" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-semibold text-slate-900 leading-snug">
                   {p.title}
