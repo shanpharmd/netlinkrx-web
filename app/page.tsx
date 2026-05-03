@@ -297,6 +297,102 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PLATFORM */}
+      <section id="platform" className="relative overflow-hidden py-24 md:py-32 border-t border-slate-200">
+        <div
+          className="orb orb-indigo"
+          style={{ top: "10%", left: "-200px", width: "500px", height: "500px", opacity: 0.18 }}
+        />
+        <div
+          className="orb orb-cyan"
+          style={{ bottom: "0%", right: "-200px", width: "450px", height: "450px", opacity: 0.15 }}
+        />
+        <div className="relative mx-auto max-w-7xl px-6">
+          <div className="text-center max-w-3xl mx-auto">
+            <Eyebrow>Platform</Eyebrow>
+            <h2 className="mt-6 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900">
+              Built on a purpose-made{" "}
+              <span className="text-emerald-600">telepharmacy platform</span>
+            </h2>
+            <p className="mt-5 text-lg text-slate-600">
+              Every NetLinkRx engagement runs on a unified queue and
+              intervention system. Pharmacists see real-time order status
+              across every facility, prioritize by urgency, and document
+              clinical work in a HIPAA-aligned audit trail.
+            </p>
+          </div>
+
+          <div className="mt-14 relative mx-auto max-w-6xl">
+            {/* Browser-frame style wrapper */}
+            <div className="rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-900/10 overflow-hidden">
+              <div className="flex items-center gap-1.5 border-b border-slate-200 bg-slate-50 px-4 py-3">
+                <span className="h-2.5 w-2.5 rounded-full bg-rose-400" />
+                <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+                <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                <span className="ml-4 text-xs font-medium text-slate-500">
+                  app.netlinkrx.com / queue
+                </span>
+              </div>
+              <div className="relative aspect-[16/10] bg-white">
+                <Image
+                  src="/netlinkrx-dashboard.png"
+                  alt="NetLinkRx telepharmacy queue dashboard showing real-time order status across multiple hospitals"
+                  fill
+                  sizes="(max-width: 1280px) 100vw, 1152px"
+                  className="object-cover object-top"
+                  priority
+                />
+              </div>
+            </div>
+            <div className="mt-4 text-center">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-amber-700">
+                <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+                Preview · In active development
+              </span>
+            </div>
+          </div>
+
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 text-blue-600 shadow-[inset_0_1px_2px_rgba(15,23,42,0.06)]">
+                <Layers className="h-6 w-6" strokeWidth={1.5} />
+              </div>
+              <h3 className="font-semibold text-slate-900">
+                Real-time multi-facility queue
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Single pane of glass across every hospital you cover. Sort by
+                urgency, hospital, or pharmacist.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 text-blue-600 shadow-[inset_0_1px_2px_rgba(15,23,42,0.06)]">
+                <ClipboardCheck className="h-6 w-6" strokeWidth={1.5} />
+              </div>
+              <h3 className="font-semibold text-slate-900">
+                Intervention documentation
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Every clinical intervention captured with timestamp, outcome,
+                and pharmacist signature. Audit-ready by default.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 text-blue-600 shadow-[inset_0_1px_2px_rgba(15,23,42,0.06)]">
+                <ShieldCheck className="h-6 w-6" strokeWidth={1.5} />
+              </div>
+              <h3 className="font-semibold text-slate-900">
+                HIPAA-aligned audit trail
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Every action logged. Role-based access. Export-ready
+                reporting for compliance and quality reviews.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SPECIALIZED OFFERING */}
       <section id="coverage" className="relative bg-soft py-24 md:py-32 border-y border-slate-200 overflow-hidden">
         <div
