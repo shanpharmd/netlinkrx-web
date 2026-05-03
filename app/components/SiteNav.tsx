@@ -6,6 +6,7 @@ const navLinks = [
   { label: "Coverage", href: "/#coverage" },
   { label: "How We Work", href: "/#how-we-work" },
   { label: "Clinical Programs", href: "/#clinical-programs" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
 ];
 
