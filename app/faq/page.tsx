@@ -117,7 +117,7 @@ export default function FaqPage() {
           style={{ top: "-150px", left: "-100px", width: "500px", height: "500px", opacity: 0.4 }}
         />
         <div
-          className="orb orb-emerald"
+          className="orb orb-cyan"
           style={{ top: "-100px", right: "-100px", width: "400px", height: "400px", opacity: 0.3 }}
         />
         <div className="relative mx-auto max-w-4xl px-6 py-20 md:py-28 text-center">
@@ -126,7 +126,7 @@ export default function FaqPage() {
           </div>
           <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-900 leading-[1.1]">
             Everything you need to know about{" "}
-            <span className="text-emerald-600">NetLinkRx</span>
+            <span className="text-blue-600">NetLinkRx</span>
           </h1>
           <p className="mt-6 mx-auto max-w-2xl text-lg leading-8 text-slate-600">
             Answers to the questions hospital pharmacy directors and
@@ -187,7 +187,7 @@ export default function FaqPage() {
       {/* CTA */}
       <section className="relative overflow-hidden py-20 md:py-28 border-t border-slate-200">
         <div
-          className="orb orb-emerald"
+          className="orb orb-cyan"
           style={{ top: "20%", right: "-100px", width: "400px", height: "400px", opacity: 0.18 }}
         />
         <div className="relative mx-auto max-w-3xl px-6 text-center">

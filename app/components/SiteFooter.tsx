@@ -18,11 +18,11 @@ export default function SiteFooter() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div className="max-w-md">
             <Image
-              src="/netlinkrx-logo.svg"
+              src="/netlinkrx-logo.png"
               alt="NetLinkRx"
-              width={240}
+              width={320}
               height={64}
-              className="h-12 w-auto"
+              className="h-10 w-auto"
             />
             <p className="mt-4 text-sm text-slate-600">
               Clinical Telepharmacy for Critical Access &amp; Rural Hospitals.

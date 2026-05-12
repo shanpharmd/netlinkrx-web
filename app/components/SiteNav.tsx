@@ -16,12 +16,12 @@ export default function SiteNav() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/netlinkrx-logo.svg"
+            src="/netlinkrx-logo.png"
             alt="NetLinkRx"
-            width={240}
+            width={320}
             height={64}
             priority
-            className="h-11 w-auto"
+            className="h-9 w-auto"
           />
         </Link>
         <nav className="hidden md:flex items-center gap-8">

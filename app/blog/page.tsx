@@ -41,7 +41,7 @@ export default function BlogComingSoon() {
           style={{ top: "-150px", left: "-100px", width: "500px", height: "500px", opacity: 0.4 }}
         />
         <div
-          className="orb orb-emerald"
+          className="orb orb-cyan"
           style={{ top: "-100px", right: "-100px", width: "400px", height: "400px", opacity: 0.3 }}
         />
         <div
@@ -56,7 +56,7 @@ export default function BlogComingSoon() {
           </div>
           <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-900 leading-[1.1]">
             Notes from the front lines of{" "}
-            <span className="text-emerald-600">rural pharmacy</span>
+            <span className="text-blue-600">rural pharmacy</span>
           </h1>
           <p className="mt-6 mx-auto max-w-2xl text-lg leading-8 text-slate-600">
             We&apos;re building a publication focused on practical analysis for
@@ -106,7 +106,7 @@ export default function BlogComingSoon() {
                 key={topic.category}
                 className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
               >
-                <p className="text-xs font-semibold uppercase tracking-widest text-emerald-600">
+                <p className="text-xs font-semibold uppercase tracking-widest text-blue-600">
                   {topic.category}
                 </p>
                 <p className="mt-3 text-sm leading-6 text-slate-700">
@@ -121,7 +121,7 @@ export default function BlogComingSoon() {
       {/* CTA */}
       <section className="relative overflow-hidden py-20 md:py-24">
         <div
-          className="orb orb-emerald"
+          className="orb orb-cyan"
           style={{ top: "10%", left: "-100px", width: "400px", height: "400px", opacity: 0.15 }}
         />
         <div className="relative mx-auto max-w-2xl px-6 text-center">

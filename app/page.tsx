@@ -159,7 +159,7 @@ const homepageFaqs = [
 function Check() {
   return (
     <svg
-      className="h-5 w-5 flex-shrink-0 text-emerald-600"
+      className="h-5 w-5 flex-shrink-0 text-blue-600"
       viewBox="0 0 20 20"
       fill="currentColor"
       aria-hidden="true"
@@ -209,7 +209,7 @@ export default function Home() {
           style={{ top: "-100px", left: "-150px", width: "500px", height: "500px" }}
         />
         <div
-          className="orb orb-emerald"
+          className="orb orb-cyan"
           style={{ top: "-50px", right: "-100px", width: "400px", height: "400px", opacity: 0.35 }}
         />
         <div
@@ -224,7 +224,7 @@ export default function Home() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-900 leading-[1.1]">
             Remote Pharmacy Care
             <br />
-            <span className="text-emerald-600">When It Matters Most</span>
+            <span className="text-blue-600">When It Matters Most</span>
           </h1>
           <p className="mt-6 mx-auto max-w-2xl text-lg leading-8 text-slate-600">
             NetLinkRx puts board-certified clinical pharmacists inside your
@@ -262,7 +262,7 @@ export default function Home() {
             <Eyebrow>Core Services</Eyebrow>
             <h2 className="mt-6 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900">
               Clinical Telepharmacy, Built for{" "}
-              <span className="text-emerald-600">Underserved Facilities</span>
+              <span className="text-blue-600">Underserved Facilities</span>
             </h2>
             <p className="mt-5 text-lg text-slate-600">
               From order verification to specialized clinical programs,
@@ -312,7 +312,7 @@ export default function Home() {
             <Eyebrow>Platform</Eyebrow>
             <h2 className="mt-6 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900">
               Built on a purpose-made{" "}
-              <span className="text-emerald-600">telepharmacy platform</span>
+              <span className="text-blue-600">telepharmacy platform</span>
             </h2>
             <p className="mt-5 text-lg text-slate-600">
               Every NetLinkRx engagement runs on a unified queue and
@@ -328,7 +328,7 @@ export default function Home() {
               <div className="flex items-center gap-1.5 border-b border-slate-200 bg-slate-50 px-4 py-3">
                 <span className="h-2.5 w-2.5 rounded-full bg-rose-400" />
                 <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
-                <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                <span className="h-2.5 w-2.5 rounded-full bg-blue-400" />
                 <span className="ml-4 text-xs font-medium text-slate-500">
                   app.netlinkrx.com / queue
                 </span>
@@ -396,7 +396,7 @@ export default function Home() {
       {/* SPECIALIZED OFFERING */}
       <section id="coverage" className="relative bg-soft py-24 md:py-32 border-y border-slate-200 overflow-hidden">
         <div
-          className="orb orb-emerald"
+          className="orb orb-cyan"
           style={{ top: "20%", left: "-200px", width: "450px", height: "450px", opacity: 0.18 }}
         />
         <div className="relative mx-auto max-w-7xl px-6">
@@ -405,7 +405,7 @@ export default function Home() {
               <Eyebrow>Specialized Offering</Eyebrow>
               <h2 className="mt-6 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900">
                 Telepharmacy Serves Facilities{" "}
-                <span className="text-emerald-600">of All Sizes, Day or Night</span>
+                <span className="text-blue-600">of All Sizes, Day or Night</span>
               </h2>
               <p className="mt-5 text-lg text-slate-600">
                 Both individual Critical Access Hospitals and multi-site rural
@@ -415,7 +415,7 @@ export default function Home() {
               </p>
               <a
                 href="#contact"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-600/20"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20"
               >
                 Get a Quote <Arrow />
               </a>
@@ -508,7 +508,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900">
                 Real Results,
                 <br />
-                <span className="text-emerald-600">Not Just Theory</span>
+                <span className="text-blue-600">Not Just Theory</span>
               </h2>
               <p className="mt-5 text-lg text-slate-600">
                 NetLinkRx solutions are measured by their impact on patient
@@ -518,7 +518,7 @@ export default function Home() {
               <div className="mt-10 grid grid-cols-2 gap-8">
                 {stats.map((s) => (
                   <div key={s.label}>
-                    <div className="text-4xl md:text-5xl font-semibold text-emerald-600">
+                    <div className="text-4xl md:text-5xl font-semibold text-blue-600">
                       {s.value}
                     </div>
                     <div className="mt-2 text-xs font-semibold uppercase tracking-widest text-slate-500">
@@ -529,7 +529,7 @@ export default function Home() {
               </div>
               <a
                 href="#contact"
-                className="mt-10 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-600/20"
+                className="mt-10 inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20"
               >
                 Get Your Custom Quote Today <Arrow />
               </a>
@@ -579,7 +579,7 @@ export default function Home() {
             <Eyebrow>Clinical Programs</Eyebrow>
             <h2 className="mt-6 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900">
               Clinical Expertise That Extends{" "}
-              <span className="text-emerald-600">Beyond Medication Orders</span>
+              <span className="text-blue-600">Beyond Medication Orders</span>
             </h2>
             <p className="mt-5 text-lg text-slate-600">
               Our pharmacists hold specialized training and advanced degrees.
@@ -594,7 +594,7 @@ export default function Home() {
                 key={p.title}
                 className="group rounded-2xl border border-slate-200 bg-white p-6 hover:border-slate-300 hover:shadow-lg hover:-translate-y-0.5 transition-all"
               >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-50 to-teal-50 text-emerald-600 shadow-[inset_0_1px_2px_rgba(15,23,42,0.06)] group-hover:scale-105 group-hover:text-emerald-700 transition-all duration-200">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-50 to-blue-50 text-indigo-600 shadow-[inset_0_1px_2px_rgba(15,23,42,0.06)] group-hover:scale-105 group-hover:text-indigo-700 transition-all duration-200">
                   <p.Icon className="h-6 w-6" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-semibold text-slate-900 leading-snug">
@@ -612,7 +612,7 @@ export default function Home() {
       {/* FAQ TEASER */}
       <section className="relative bg-soft py-24 md:py-32 border-y border-slate-200 overflow-hidden">
         <div
-          className="orb orb-emerald"
+          className="orb orb-cyan"
           style={{ top: "10%", right: "-150px", width: "400px", height: "400px", opacity: 0.18 }}
         />
         <div className="relative mx-auto max-w-4xl px-6">
@@ -663,7 +663,7 @@ export default function Home() {
             <Eyebrow>Get Started</Eyebrow>
             <h2 className="mt-6 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900">
               Does Your Pharmacy Need{" "}
-              <span className="text-emerald-600">to Do More With Less?</span>
+              <span className="text-blue-600">to Do More With Less?</span>
             </h2>
             <p className="mt-5 text-lg text-slate-600">
               Tell us about your facility and coverage needs. We&apos;ll
