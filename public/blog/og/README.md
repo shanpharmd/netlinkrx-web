@@ -7,9 +7,11 @@ Drop your social-share preview images here, one per published article.
 | Property | Value |
 |----------|-------|
 | Format | PNG (preferred) or JPG |
-| Dimensions | 1200 x 630 pixels |
+| Dimensions | **1200 x 800 pixels** (3:2 aspect — fits both LinkedIn share preview and blog card without cropping) |
 | Max size | Under 1 MB (LinkedIn caps preview fetch at ~5 MB but smaller renders faster) |
 | Filename | Must match the post's `slug` in frontmatter |
+
+**Why 1200x800 not 1200x630**: 1200x630 is LinkedIn's classic OG preview spec but it renders too wide and short inside the blog card layout. 1200x800 fits cleanly in both — LinkedIn handles the slightly-taller image, and the blog card displays it without cropping.
 
 ## Filename rule
 

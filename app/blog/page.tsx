@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { ArrowRight, Newspaper, Sparkles } from "lucide-react";
 import { getAllPosts, pillarBadge, formatDate } from "@/lib/blog";
@@ -58,24 +59,46 @@ export default function BlogIndex() {
           </p>
           <Link
             href={`/blog/${latest.slug}`}
-            className="mt-4 block rounded-2xl border border-slate-200 bg-white p-8 md:p-10 shadow-sm transition-shadow hover:shadow-md"
+            className="group mt-4 block rounded-2xl border border-slate-200 bg-white p-4 md:p-6 shadow-sm transition-shadow hover:shadow-md"
           >
-            <PillarBadge pillar={latest.pillar} />
-            <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 leading-tight">
-              {latest.title}
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">
-              {latest.description}
-            </p>
-            <div className="mt-6 flex items-center gap-3 text-sm text-slate-500">
-              <span>{formatDate(latest.date)}</span>
-              <span>·</span>
-              <span>{latest.readingTime} min read</span>
-              <span>·</span>
-              <span>{latest.author}</span>
-            </div>
-            <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-600">
-              Read article <ArrowRight className="h-4 w-4" strokeWidth={2} />
+            <div className="grid gap-6 md:grid-cols-2 md:items-center">
+              {/* TEXT (left on desktop, bottom on mobile) */}
+              <div className="order-2 md:order-1 md:px-4 md:py-4 flex flex-col">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center rounded-full bg-slate-900 px-2.5 py-1 text-xs font-semibold uppercase tracking-widest text-white">
+                    Featured
+                  </span>
+                  <PillarBadge pillar={latest.pillar} />
+                </div>
+                <h2 className="mt-5 text-2xl md:text-[1.65rem] lg:text-[2rem] font-semibold tracking-tight text-slate-900 leading-[1.15] text-balance">
+                  {latest.title}
+                </h2>
+                <p className="mt-4 text-base leading-7 text-slate-600 line-clamp-3">
+                  {latest.description}
+                </p>
+                <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-slate-500">
+                  <span>{formatDate(latest.date)}</span>
+                  <span>·</span>
+                  <span>{latest.readingTime} min read</span>
+                </div>
+                <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-600">
+                  Read article <ArrowRight className="h-4 w-4" strokeWidth={2} />
+                </div>
+              </div>
+
+              {/* IMAGE (right on desktop, top on mobile). 3:2 cell matches native 1200x800 image — no cropping. */}
+              {latest.ogImage && (
+                <div className="order-1 md:order-2 relative aspect-[3/2] w-full overflow-hidden rounded-xl bg-slate-50">
+                  <Image
+                    src={latest.ogImage}
+                    alt={latest.title}
+                    fill
+                    priority
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                </div>
+              )}
             </div>
           </Link>
         </div>
@@ -93,19 +116,32 @@ export default function BlogIndex() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="block rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                  className="group block overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-md"
                 >
-                  <PillarBadge pillar={post.pillar} />
-                  <h3 className="mt-3 text-xl font-semibold tracking-tight text-slate-900 leading-snug">
-                    {post.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-600 line-clamp-3">
-                    {post.description}
-                  </p>
-                  <div className="mt-4 flex items-center gap-2 text-xs text-slate-500">
-                    <span>{formatDate(post.date)}</span>
-                    <span>·</span>
-                    <span>{post.readingTime} min read</span>
+                  {post.ogImage && (
+                    <div className="relative aspect-[3/2] w-full overflow-hidden bg-slate-100">
+                      <Image
+                        src={post.ogImage}
+                        alt={post.title}
+                        fill
+                        sizes="(min-width: 768px) 384px, 100vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                      />
+                    </div>
+                  )}
+                  <div className="p-6">
+                    <PillarBadge pillar={post.pillar} />
+                    <h3 className="mt-3 text-xl font-semibold tracking-tight text-slate-900 leading-snug">
+                      {post.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-6 text-slate-600 line-clamp-3">
+                      {post.description}
+                    </p>
+                    <div className="mt-4 flex items-center gap-2 text-xs text-slate-500">
+                      <span>{formatDate(post.date)}</span>
+                      <span>·</span>
+                      <span>{post.readingTime} min read</span>
+                    </div>
                   </div>
                 </Link>
               ))}
