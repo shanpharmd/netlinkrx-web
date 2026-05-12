@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://netlinkrx.com"
+  ),
   title: "NetLinkRx | Clinical Telepharmacy for Critical Access & Rural Hospitals",
   description:
     "Board-certified clinical pharmacists inside your Critical Access or Rural Hospital. On demand, overnight, or around the clock. Zero staffing gaps. Zero compromises on patient safety.",
