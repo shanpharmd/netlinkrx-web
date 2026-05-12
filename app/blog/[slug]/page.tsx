@@ -35,13 +35,31 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "article",
       publishedTime: meta.date,
       authors: [meta.author],
-      images: meta.ogImage ? [{ url: meta.ogImage }] : undefined,
+      images: meta.ogImage
+        ? [
+            {
+              url: meta.ogImage,
+              width: 1200,
+              height: 630,
+              alt: meta.title,
+            },
+          ]
+        : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title: meta.title,
       description: meta.description,
-      images: meta.ogImage ? [meta.ogImage] : undefined,
+      images: meta.ogImage
+        ? [
+            {
+              url: meta.ogImage,
+              width: 1200,
+              height: 630,
+              alt: meta.title,
+            },
+          ]
+        : undefined,
     },
   };
 }
