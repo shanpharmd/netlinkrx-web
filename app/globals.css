@@ -65,3 +65,31 @@ body {
   );
 }
 
+/* Subtle vertical hairlines for hero. Stripe-style infrastructure feel. */
+.bg-grid-lines {
+  background-image: linear-gradient(
+    to right,
+    rgba(15, 23, 42, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: calc(100% / 12) 100%;
+}
+
+/* Soft fade at the top and bottom of grid line sections to keep them subtle */
+.bg-grid-lines-mask {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+}
+

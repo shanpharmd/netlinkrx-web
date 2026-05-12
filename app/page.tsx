@@ -85,13 +85,13 @@ const stats = [
 ];
 
 const whyNetLinkRx = [
-  "W-2 clinical pharmacists, not contractors",
-  "10+ years avg hospital pharmacy experience",
-  "ASHP-aligned clinical competencies",
-  "Proprietary compliance & reporting platform",
-  "Deep Critical Access Hospital specialization",
-  "Sub-20 minute average order turnaround",
-  "Compatible with 60+ pharmacy information systems",
+  { label: "Clinicians", value: "W-2, not contractors" },
+  { label: "Experience", value: "10+ years avg hospital pharmacy" },
+  { label: "Standards", value: "ASHP-aligned clinical competencies" },
+  { label: "Platform", value: "Proprietary compliance + reporting" },
+  { label: "Focus", value: "Critical Access Hospital specialization" },
+  { label: "Turnaround", value: "Sub-20 minute average" },
+  { label: "Integrations", value: "60+ pharmacy information systems" },
 ];
 
 const clinicalPrograms = [
@@ -173,6 +173,23 @@ function Check() {
   );
 }
 
+function CheckCompliance() {
+  return (
+    <svg
+      className="h-5 w-5 flex-shrink-0 text-emerald-500"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fillRule="evenodd"
+        d="M16.704 5.29a1 1 0 010 1.42l-7.5 7.5a1 1 0 01-1.42 0l-3.5-3.5a1 1 0 111.42-1.42L8.5 12.08l6.79-6.79a1 1 0 011.42 0z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
+
 function Arrow() {
   return (
     <svg
@@ -201,20 +218,14 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 export default function Home() {
   return (
     <div id="top">
-      {/* HERO with gradient orbs */}
+      {/* HERO */}
       <section className="relative overflow-hidden border-b border-slate-200 bg-white">
-        {/* Soft blurred orbs */}
+        {/* Vertical grid lines, masked at top/bottom */}
+        <div className="absolute inset-0 bg-grid-lines bg-grid-lines-mask pointer-events-none" />
+        {/* Single soft orb */}
         <div
           className="orb orb-blue"
-          style={{ top: "-100px", left: "-150px", width: "500px", height: "500px" }}
-        />
-        <div
-          className="orb orb-cyan"
-          style={{ top: "-50px", right: "-100px", width: "400px", height: "400px", opacity: 0.35 }}
-        />
-        <div
-          className="orb orb-cyan"
-          style={{ bottom: "-150px", left: "30%", width: "450px", height: "450px", opacity: 0.3 }}
+          style={{ top: "-150px", left: "50%", transform: "translateX(-50%)", width: "700px", height: "500px", opacity: 0.35 }}
         />
 
         <div className="relative mx-auto max-w-4xl px-6 py-24 md:py-36 text-center">
@@ -301,11 +312,7 @@ export default function Home() {
       <section id="platform" className="relative overflow-hidden py-24 md:py-32 border-t border-slate-200">
         <div
           className="orb orb-indigo"
-          style={{ top: "10%", left: "-200px", width: "500px", height: "500px", opacity: 0.18 }}
-        />
-        <div
-          className="orb orb-cyan"
-          style={{ bottom: "0%", right: "-200px", width: "450px", height: "450px", opacity: 0.15 }}
+          style={{ top: "20%", right: "-200px", width: "450px", height: "450px", opacity: 0.15 }}
         />
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="text-center max-w-3xl mx-auto">
@@ -345,8 +352,11 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-4 text-center">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-amber-700">
-                <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-xs font-mono uppercase tracking-widest text-slate-700">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75 animate-ping" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-blue-600" />
+                </span>
                 Preview · In active development
               </span>
             </div>
@@ -518,7 +528,7 @@ export default function Home() {
               <div className="mt-10 grid grid-cols-2 gap-8">
                 {stats.map((s) => (
                   <div key={s.label}>
-                    <div className="text-4xl md:text-5xl font-semibold text-blue-600">
+                    <div className="font-mono text-4xl md:text-5xl font-medium text-slate-900 tracking-tight">
                       {s.value}
                     </div>
                     <div className="mt-2 text-xs font-semibold uppercase tracking-widest text-slate-500">
@@ -546,22 +556,27 @@ export default function Home() {
                 />
               </div>
               <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-slate-900">
-                    Why NetLinkRx?
+                <div className="flex items-center justify-between pb-4 border-b border-slate-200">
+                  <h3 className="text-sm font-mono uppercase tracking-widest text-slate-900">
+                    spec_sheet
                   </h3>
-                  <span className="text-xs font-semibold uppercase tracking-widest text-blue-700">
-                    Why Us
+                  <span className="text-xs font-mono uppercase tracking-widest text-slate-500">
+                    netlinkrx / v1
                   </span>
                 </div>
-                <ul className="mt-6 space-y-4">
+                <dl className="mt-6 divide-y divide-slate-100">
                   {whyNetLinkRx.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
+                    <div key={item.label} className="flex items-start gap-4 py-3">
                       <Check />
-                      <span className="text-sm text-slate-700">{item}</span>
-                    </li>
+                      <dt className="w-28 flex-shrink-0 text-xs font-mono uppercase tracking-widest text-slate-500 mt-0.5">
+                        {item.label}
+                      </dt>
+                      <dd className="flex-1 text-sm text-slate-700 leading-6">
+                        {item.value}
+                      </dd>
+                    </div>
                   ))}
-                </ul>
+                </dl>
               </div>
             </div>
           </div>
@@ -594,7 +609,7 @@ export default function Home() {
                 key={p.title}
                 className="group rounded-2xl border border-slate-200 bg-white p-6 hover:border-slate-300 hover:shadow-lg hover:-translate-y-0.5 transition-all"
               >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-50 to-blue-50 text-indigo-600 shadow-[inset_0_1px_2px_rgba(15,23,42,0.06)] group-hover:scale-105 group-hover:text-indigo-700 transition-all duration-200">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-sky-50 to-blue-50 text-blue-600 shadow-[inset_0_1px_2px_rgba(15,23,42,0.06)] group-hover:scale-105 group-hover:text-blue-700 transition-all duration-200">
                   <p.Icon className="h-6 w-6" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-semibold text-slate-900 leading-snug">
@@ -648,6 +663,37 @@ export default function Home() {
             >
               View all FAQs <Arrow />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* COMPLIANCE BADGE STRIP */}
+      <section className="relative border-t border-slate-200 bg-white py-10">
+        <div className="mx-auto max-w-5xl px-6">
+          <p className="text-center text-xs font-mono uppercase tracking-widest text-slate-500 mb-6">
+            Built to standard
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+            <div className="flex items-center gap-2">
+              <CheckCompliance />
+              <span className="text-sm font-medium text-slate-700">
+                HIPAA Aligned
+              </span>
+            </div>
+            <span className="hidden sm:block h-4 w-px bg-slate-200" />
+            <div className="flex items-center gap-2">
+              <CheckCompliance />
+              <span className="text-sm font-medium text-slate-700">
+                NABP-Compliant LLC
+              </span>
+            </div>
+            <span className="hidden sm:block h-4 w-px bg-slate-200" />
+            <div className="flex items-center gap-2">
+              <CheckCompliance />
+              <span className="text-sm font-medium text-slate-700">
+                ASHP Standards
+              </span>
+            </div>
           </div>
         </div>
       </section>
