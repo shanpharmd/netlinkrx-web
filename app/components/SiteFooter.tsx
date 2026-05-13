@@ -44,10 +44,10 @@ export default function SiteFooter() {
         <div className="mt-10 flex flex-col sm:flex-row justify-between gap-4 border-t border-slate-200 pt-6 text-xs text-slate-500">
           <p>© 2026 NetLinkRx. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-slate-700 transition-colors">
+            <Link href="/terms" className="hover:text-slate-700 transition-colors">
               Terms
             </Link>
-            <Link href="#" className="hover:text-slate-700 transition-colors">
+            <Link href="/privacy" className="hover:text-slate-700 transition-colors">
               Privacy
             </Link>
           </div>
