@@ -548,8 +548,8 @@ export default function Home() {
             <div className="space-y-6">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 shadow-xl">
                 <Image
-                  src="/pharmacist-monitors.png"
-                  alt="Clinical pharmacist reviewing medication orders on dual monitors"
+                  src="/office.png"
+                  alt="NetLinkRx operations center with clinical pharmacist workstations"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
